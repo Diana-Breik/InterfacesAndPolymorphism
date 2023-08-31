@@ -3,7 +3,7 @@ package org.example;
 import java.util.Objects;
 //Schritt 2: Erstellt eine Klasse 'MusicPlayer', die das 'Playable'-Interface implementiert. Implementiert die 'play'-Methode, um einen Song abzuspielen.
 public class MusicPlayer implements Playable{
-    private boolean isOn = true;
+    public boolean isOn = true;
     public MusicPlayer() {
     }
 

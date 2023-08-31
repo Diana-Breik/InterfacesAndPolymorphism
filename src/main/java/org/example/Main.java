@@ -24,5 +24,11 @@ public class Main {
         musicplayer1.play();
         videoPlayer1.play();
 
+        System.out.println("--------------------------------------------");
+
+        //ick kann nur die Elemente, die auch innerhalb des Typs sind, greifen, das bedeutet:
+        //Playable musicplayer2 = new MusicPlayer();// mit diesem Befehl kann ich ENTWEDER nur die Elemente und Methoden greifen,die sowohl in der Klasse "MusicPlayer" als auch in "Playable" sind, ODER die in "Playable" sind.
+        MusicPlayer musicplayer2 = new MusicPlayer();//in diesem Fall kann ich alle Dinge, die in "MusicPlayer" sind, wieder greifen, weil der Typ da auch "MusicPlayer" ist.
+        System.out.println(musicplayer2.isOn);
     }
 }
