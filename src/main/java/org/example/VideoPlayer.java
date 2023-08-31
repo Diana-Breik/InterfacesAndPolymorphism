@@ -3,7 +3,7 @@ package org.example;
 import java.util.Objects;
 //Schritt 3: Erstellt eine Klasse 'VideoPlayer', die ebenfalls das 'Playable'-Interface implementiert. Implementiert die 'play'-Methode, um ein Video abzuspielen.
 public class VideoPlayer implements Playable{
-    boolean videoOn = true;
+    private boolean videoOn = true;
     public VideoPlayer() {
     }
 

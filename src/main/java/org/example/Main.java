@@ -3,12 +3,22 @@ package org.example;
 //Schritt 6: In der 'main'-Methode initialisiert jeweils ein Objekt der Klasse 'MusicPlayer' und 'VideoPlayer' mit dem Interface 'Playable' (Polymorphismus).
 public class Main {
     public static void main(String[] args) {
-        MusicPlayer musicplayer = new MusicPlayer();
-        VideoPlayer videoPlayer = new VideoPlayer();
+
         MediaController mediaController = new MediaController();
-        mediaController.playMedia(musicplayer);
-        mediaController.playMedia(videoPlayer);
+
+        // Weise 1: Entweder erzeugen wir die Objekte zuerst und dann übergeben wir sie als Parameter ->
+        //MusicPlayer musicplayer = new MusicPlayer();
+        // VideoPlayer videoPlayer = new VideoPlayer();
+        //mediaController.playMedia(musicplayer);
+        //mediaController.playMedia(videoPlayer);
+
+        // Weise 2: Oder die neuen Objekte erzeugen wir sofort innerhalb den Klammern als Parameter ->
+        mediaController.playMedia(new MusicPlayer());
+        mediaController.playMedia(new VideoPlayer());
+
         System.out.println("--------------------------------------------");
+
+        // Polymorphism
         Playable musicplayer1 = new MusicPlayer();
         Playable videoPlayer1 = new VideoPlayer();
         musicplayer1.play();

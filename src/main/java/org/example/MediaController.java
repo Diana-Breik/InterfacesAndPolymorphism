@@ -7,7 +7,7 @@ public class MediaController {
 
      public void playMedia(Playable playable){
         playable.play();
-        System.out.println("Das ist die Klasse MediaController");
+        System.out.println("  -> Das ist die Klasse MediaController");
     }
 
 
